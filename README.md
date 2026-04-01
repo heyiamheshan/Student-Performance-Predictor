@@ -1,4 +1,4 @@
-# [Project Name: e.g., End-to-End Student Performance Predictor]
+#  End-to-End Student Performance Predictor
 
 ## 📌 Project Overview
 This project is a comprehensive, production-ready Machine Learning solution designed with **Modular Programming** and **MLOps** best practices. It automates the entire lifecycle of a machine learning model, from data ingestion to cloud deployment using a robust CI/CD pipeline.
