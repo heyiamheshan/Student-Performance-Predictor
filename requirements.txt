@@ -4,6 +4,6 @@ numpy
 scikit-learn
 xgboost
 dill
-catboost
 seaborn
 matplotlib
+gunicorn
