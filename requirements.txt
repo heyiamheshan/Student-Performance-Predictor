@@ -1,9 +1,7 @@
 flask
-pandas
+gunicorn
+dill
 numpy
+pandas
 scikit-learn
 xgboost
-dill
-seaborn
-matplotlib
-gunicorn
