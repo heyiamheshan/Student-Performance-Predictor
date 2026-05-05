@@ -1,2 +1,201 @@
 <!DOCTYPE html>
-<h1>Welcome to the ML Project</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Exam Performance Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            color: #f1f5f9;
+        }
+
+        .hero {
+            text-align: center;
+            max-width: 560px;
+        }
+
+        .icon-wrap {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 1.25rem;
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.45);
+            margin-bottom: 1.75rem;
+        }
+
+        .icon-wrap svg {
+            width: 2.4rem;
+            height: 2.4rem;
+            stroke: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            color: #c4b5fd;
+            font-size: 0.73rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.9rem;
+            border-radius: 999px;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 40%, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #a78bfa;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 0.15rem;
+        }
+
+        .stat-divider {
+            width: 1px;
+            background: rgba(255,255,255,0.1);
+            align-self: stretch;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.9rem 2rem;
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            cursor: pointer;
+            letter-spacing: 0.02em;
+            box-shadow: 0 4px 24px rgba(124, 58, 237, 0.45);
+            transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
+        }
+
+        .cta:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.6);
+        }
+
+        .cta:active { transform: translateY(0); }
+
+        .cta svg {
+            width: 1.1rem;
+            height: 1.1rem;
+            stroke: #fff;
+            transition: transform 0.2s;
+        }
+
+        .cta:hover svg { transform: translateX(3px); }
+
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.78rem;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="icon-wrap">
+            <svg fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+            </svg>
+        </div>
+
+        <div class="badge">ML-Powered Prediction</div>
+
+        <h1>Student Exam Performance Predictor</h1>
+
+        <p class="subtitle">
+            Predict a student's Mathematics score based on demographic and academic factors using a trained machine learning model.
+        </p>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-num">7</div>
+                <div class="stat-label">Input Features</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <div class="stat-num">1000+</div>
+                <div class="stat-label">Training Samples</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <div class="stat-num">0–100</div>
+                <div class="stat-label">Score Range</div>
+            </div>
+        </div>
+
+        <a href="/predict" class="cta">
+            Start Prediction
+            <svg fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </a>
+
+        <p class="footer-note">No data is stored — predictions are made in real time.</p>
+    </div>
+</body>
+</html>
